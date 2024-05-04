@@ -37,8 +37,8 @@ Ensure you have MySQL installed on your system. Create a database named payroll_
 ### Usage
    - Clone this repository to your local machine.
    - Navigate to the directory containing the files.
-   - Set your Database Password in DataBase Variable in payroll_system.py 
-   - Run python payroll_system.py to start the Payroll Management System.
+   - Set your Database Password in DatabasePassword Variable in payroll_management.py 
+   - Run python payroll_management.py to start the Payroll Management System.
    - Follow the on-screen instructions to perform various tasks related to employee records and payroll management.
 
 Feel free to explore and customize the system according to your needs!
