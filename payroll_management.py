@@ -4,7 +4,8 @@ from tabulate import tabulate
 import os
 import platform
 
-mydb = mysql.connector.connect(host='localhost', user='root', password='Nikhil@18')
+const databasePassword = ""
+mydb = mysql.connector.connect(host='localhost', user='root', password=databasePassword)
 mycursor = mydb.cursor()
 mycursor.execute("CREATE DATABASE IF NOT EXISTS Payroll;")
 mycursor.execute("USE Payroll;")
