@@ -4,8 +4,8 @@ from tabulate import tabulate
 import os
 import platform
 
-const databasePassword = ""
-mydb = mysql.connector.connect(host='localhost', user='root', password=databasePassword)
+databasePassword = ""
+mydb = mysql.connector.connect(host='localhost', user='root', password=databasePassword, auth_plugin='mysql_native_password')
 mycursor = mydb.cursor()
 mycursor.execute("CREATE DATABASE IF NOT EXISTS Payroll;")
 mycursor.execute("USE Payroll;")
@@ -288,8 +288,7 @@ def menu_set():
     except ValueError:
         exit("\nHy! That's Not A Number")
 
-def run_again(run = 'y'):
-    
+def main(run = 'y'):
     while run.lower() == 'y':
         if platform.system() == "Windows":
             os.system('cls')
@@ -297,6 +296,5 @@ def run_again(run = 'y'):
         else:
             os.system('clear')
         menu_set()
-        run = input("\nDo You Want To Run Again Y/N : ")
-
-run_again()
+         
+main()
